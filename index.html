@@ -110,8 +110,17 @@
         
         nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(2,6,23,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 1rem 0; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: flex-start; }
-        .brand-text { font-weight: 900; font-size: 1.4rem; color: #fff; letter-spacing: 0.5px; display: flex; align-items: center; }
-        .brand-text span { color: var(--primary); }
+        
+        /* CSS NAVBAR UPDATE MOBILE-RESPONSIVE */
+        .brand-text { display: flex; align-items: center; text-decoration: none; color: #fff; font-weight: 900; letter-spacing: 0.5px; }
+        .brand-logo { height: 40px; margin-right: 10px; object-fit: contain; }
+        .brand-name { font-size: 1.4rem; }
+        .brand-name .text-primary { color: var(--primary); }
+
+        @media (max-width: 480px) {
+            .brand-logo { height: 32px; max-width: 50vw; }
+            .brand-name { font-size: 1.1rem; }
+        }
 
         /* [ATTENTION] HERO SECTION */
         .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: var(--darker); overflow: hidden; padding-top: 60px; }
@@ -177,15 +186,14 @@
 
     <nav>
         <div class="nav-container">
-            <div class="brand-text">
-                <!-- INJEKSI LOGO BEJOPELITA -->
-                <img src="img/logo-bejopelita-saluran-mampet-jabodetabek.webp" alt="Bejopelita jasa saluran mampet Depok" style="height: 40px; margin-right: 10px;">
-                BEJO<span class="text-primary">PELITA</span>
-            </div>
+            <a href="#" class="brand-text">
+                <img src="img/logo-bejopelita-saluran-mampet-jabodetabek.webp" alt="Bejopelita jasa saluran mampet Depok" class="brand-logo">
+                <span class="brand-name">BEJO<span class="text-primary">PELITA</span></span>
+            </a>
         </div>
     </nav>
 
-    <!-- 1. [ATTENTION] HERO SECTION (Gambar Hero Diupdate) -->
+    <!-- 1. [ATTENTION] HERO SECTION -->
     <header class="hero">
         <img src="img/jasa-saluran-mampet-depok-panggilan-24-jam-bejopelita.webp" alt="Armada teknisi jasa saluran mampet Depok panggilan 24 jam BejoPelita siap meluncur membawa mesin rooter" class="hero-bg" fetchpriority="high" loading="eager" decoding="sync">
         <div class="hero-overlay"></div>
@@ -218,7 +226,7 @@
         </div>
     </section>
 
-    <!-- 4. [DESIRE] THE SILO HUB (Pasukan Infanteri - Gambar Diupdate) -->
+    <!-- 4. [DESIRE] THE SILO HUB (Pasukan Infanteri - Dengan decoding async) -->
     <section id="layanan" style="background:var(--secondary);">
         <div class="container">
             <div style="text-align:center;margin-bottom:3rem;">
@@ -228,43 +236,43 @@
             
             <div class="silo-grid">
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20wastafel%20saya%20mampet%20di%20area%20Cinere." class="card">
-                    <img class="card-img" src="img/tukang-pelancar-saluran-mampet-wastafel-cinere-tanpa-bongkar.webp" alt="Tukang pelancar saluran mampet wastafel dapur di Cinere pengerjaan rapi tanpa bongkar ubin" loading="lazy">
+                    <img class="card-img" src="img/tukang-pelancar-saluran-mampet-wastafel-cinere-tanpa-bongkar.webp" alt="Tukang pelancar saluran mampet wastafel dapur di Cinere pengerjaan rapi tanpa bongkar ubin" loading="lazy" decoding="async">
                     <h3>Saluran Wastafel Mampet Cinere</h3>
                     <div class="card-btn">Solusi Tanpa Bongkar ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20WC%20saya%20mampet%20di%20area%20Pancoran%20Mas/Beji." class="card">
-                    <img class="card-img" src="img/mesin-rooter-spiral-pelancar-wc-mampet-pancoran-mas-beji.webp" alt="Teknisi menggunakan mesin rooter spiral untuk pelancar wc mampet darurat di Pancoran Mas dan Beji" loading="lazy">
+                    <img class="card-img" src="img/mesin-rooter-spiral-pelancar-wc-mampet-pancoran-mas-beji.webp" alt="Teknisi menggunakan mesin rooter spiral untuk pelancar wc mampet darurat di Pancoran Mas dan Beji" loading="lazy" decoding="async">
                     <h3>Darurat WC Mampet Pancoran Mas & Beji</h3>
                     <div class="card-btn">Panggil Tim Darurat ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20pipa%20got%20saya%20bermasalah%20di%20area%20Sawangan/Limo." class="card">
-                    <img class="card-img" src="img/jasa-perbaikan-pipa-saluran-air-mampet-sawangan-limo-bergaransi.webp" alt="Tukang jasa perbaikan pipa saluran air got mampet di Sawangan dan Limo dengan garansi lancar" loading="lazy">
+                    <img class="card-img" src="img/jasa-perbaikan-pipa-saluran-air-mampet-sawangan-limo-bergaransi.webp" alt="Tukang jasa perbaikan pipa saluran air got mampet di Sawangan dan Limo dengan garansi lancar" loading="lazy" decoding="async">
                     <h3>Perbaikan Pipa & Got Sawangan Limo</h3>
                     <div class="card-btn">Cek Biaya Termurah ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20saya%20butuh%20jasa%20lacak%20pipa%20bocor%20di%20Depok." class="card">
-                    <img class="card-img" src="img/alat-deteksi-pipa-bocor-bawah-lantai-acoustics-leak-detector-depok.webp" alt="Proses pelacakan alat deteksi pipa bocor air bawah lantai menggunakan acoustics leak detector di area Depok" loading="lazy">
+                    <img class="card-img" src="img/alat-deteksi-pipa-bocor-bawah-lantai-acoustics-leak-detector-depok.webp" alt="Proses pelacakan alat deteksi pipa bocor air bawah lantai menggunakan acoustics leak detector di area Depok" loading="lazy" decoding="async">
                     <h3>Lacak Titik Pipa Bocor Depok Raya</h3>
                     <div class="card-btn">Lacak Kebocoran ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20saya%20butuh%20sedot%20lemak%20restoran%20area%20Margonda." class="card">
-                    <img class="card-img" src="img/jasa-sedot-wc-kuras-limbah-grease-trap-restoran-margonda.webp" alt="Jasa spesialis sedot wc komersial dan tukang kuras limbah grease trap restoran di jalan Margonda" loading="lazy">
+                    <img class="card-img" src="img/jasa-sedot-wc-kuras-limbah-grease-trap-restoran-margonda.webp" alt="Jasa spesialis sedot wc komersial dan tukang kuras limbah grease trap restoran di jalan Margonda" loading="lazy" decoding="async">
                     <h3>Kuras Lemak & Sedot WC Margonda</h3>
                     <div class="card-btn">Amankan Bisnis Anda ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20ingin%20pesan%20jasa%20pembuatan%20septic%20tank%20baru%20di%20Cimanggis." class="card">
-                    <img class="card-img" src="img/jasa-tukang-buat-septic-tank-resapan-instalasi-pipa-cimanggis.webp" alt="Jasa tukang buat septic tank resapan anti penuh dan instalasi pipa baru standar SNI di Cimanggis" loading="lazy">
+                    <img class="card-img" src="img/jasa-tukang-buat-septic-tank-resapan-instalasi-pipa-cimanggis.webp" alt="Jasa tukang buat septic tank resapan anti penuh dan instalasi pipa baru standar SNI di Cimanggis" loading="lazy" decoding="async">
                     <h3>Buat Septic Tank & Pipa Baru Cimanggis</h3>
                     <div class="card-btn">Pesan Instalasi Rapi ➔</div>
                 </a>
 
                 <a href="https://wa.me/6289530607936?text=Halo%20BejoPelita,%20tolong%20service%20keran%20dan%20toren%20air%20saya%20di%20Depok." class="card">
-                    <img class="card-img" src="img/jasa-service-keran-air-mampet-kuras-toren-tandon-depok.webp" alt="Hasil semburan deras setelah pengerjaan jasa service keran air mampet dan kuras toren tandon di Depok" loading="lazy">
+                    <img class="card-img" src="img/jasa-service-keran-air-mampet-kuras-toren-tandon-depok.webp" alt="Hasil semburan deras setelah pengerjaan jasa service keran air mampet dan kuras toren tandon di Depok" loading="lazy" decoding="async">
                     <h3>Service Keran & Kuras Toren Depok</h3>
                     <div class="card-btn">Kembalikan Air Deras ➔</div>
                 </a>
@@ -292,59 +300,59 @@
             <!-- Masonry Grid 14 Foto -->
             <div class="masonry-grid" id="gallery">
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/kondisi-wastafel-dapur-mampet-parah-sebelum-diperbaiki-depok.webp')">
-                    <img src="img/kondisi-wastafel-dapur-mampet-parah-sebelum-diperbaiki-depok.webp" alt="Kondisi wastafel dapur mampet parah air kotor menggenang sebelum diperbaiki tim BejoPelita Depok" loading="lazy">
+                    <img src="img/kondisi-wastafel-dapur-mampet-parah-sebelum-diperbaiki-depok.webp" alt="Kondisi wastafel dapur mampet parah air kotor menggenang sebelum diperbaiki tim BejoPelita Depok" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Depok</div>
                 </div>
                 <div class="masonry-item" data-category="cinere" onclick="openLightbox('img/hasil-wastafel-lancar-mengalir-deras-setelah-di-rooter-cinere.webp')">
-                    <img src="img/hasil-wastafel-lancar-mengalir-deras-setelah-di-rooter-cinere.webp" alt="Hasil wastafel lancar mengalir deras setelah di rooter tanpa bongkar lantai di Cinere" loading="lazy">
+                    <img src="img/hasil-wastafel-lancar-mengalir-deras-setelah-di-rooter-cinere.webp" alt="Hasil wastafel lancar mengalir deras setelah di rooter tanpa bongkar lantai di Cinere" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Cinere</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/penanganan-kloset-wc-mampet-meluap-tengah-malam-pancoran-mas.webp')">
-                    <img src="img/penanganan-kloset-wc-mampet-meluap-tengah-malam-pancoran-mas.webp" alt="Penanganan darurat kloset wc mampet meluap tengah malam di area Pancoran Mas" loading="lazy">
+                    <img src="img/penanganan-kloset-wc-mampet-meluap-tengah-malam-pancoran-mas.webp" alt="Penanganan darurat kloset wc mampet meluap tengah malam di area Pancoran Mas" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Pancoran Mas</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/teknisi-memasukan-kabel-spiral-mesin-rooter-tanpa-merusak-ubin-beji.webp')">
-                    <img src="img/teknisi-memasukan-kabel-spiral-mesin-rooter-tanpa-merusak-ubin-beji.webp" alt="Teknisi BejoPelita memasukan kabel spiral mesin rooter ke saluran lantai kamar mandi tanpa merusak ubin di Beji" loading="lazy">
+                    <img src="img/teknisi-memasukan-kabel-spiral-mesin-rooter-tanpa-merusak-ubin-beji.webp" alt="Teknisi BejoPelita memasukan kabel spiral mesin rooter ke saluran lantai kamar mandi tanpa merusak ubin di Beji" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Beji</div>
                 </div>
                 <div class="masonry-item" data-category="sawangan" onclick="openLightbox('img/proses-pelancaran-pipa-got-utama-tersumbat-lemak-sawangan.webp')">
-                    <img src="img/proses-pelancaran-pipa-got-utama-tersumbat-lemak-sawangan.webp" alt="Proses pelancaran pipa got utama perumahan yang tersumbat lemak keras di Sawangan" loading="lazy">
+                    <img src="img/proses-pelancaran-pipa-got-utama-tersumbat-lemak-sawangan.webp" alt="Proses pelancaran pipa got utama perumahan yang tersumbat lemak keras di Sawangan" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Sawangan</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/penarikan-gumpalan-lemak-rambut-dari-dalam-pipa-paralon-buntu.webp')">
-                    <img src="img/penarikan-gumpalan-lemak-rambut-dari-dalam-pipa-paralon-buntu.webp" alt="Penarikan gumpalan kotoran lemak beku dan rambut dari dalam pipa paralon buntu" loading="lazy">
+                    <img src="img/penarikan-gumpalan-lemak-rambut-dari-dalam-pipa-paralon-buntu.webp" alt="Penarikan gumpalan kotoran lemak beku dan rambut dari dalam pipa paralon buntu" loading="lazy" decoding="async">
                     <div class="overlay-text">Dokumentasi Tim BejoPelita</div>
                 </div>
                 <div class="masonry-item" data-category="cinere" onclick="openLightbox('img/pelacakan-titik-pipa-bocor-bawah-lantai-ruang-tamu-cinere.webp')">
-                    <img src="img/pelacakan-titik-pipa-bocor-bawah-lantai-ruang-tamu-cinere.webp" alt="Pelacakan titik sumber pipa bocor bawah lantai ruang tamu kawasan perumahan Cinere" loading="lazy">
+                    <img src="img/pelacakan-titik-pipa-bocor-bawah-lantai-ruang-tamu-cinere.webp" alt="Pelacakan titik sumber pipa bocor bawah lantai ruang tamu kawasan perumahan Cinere" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Perumahan Cinere</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/penggunaan-alat-acoustics-leak-detector-pada-tembok-kamar-mandi-rembes.webp')">
-                    <img src="img/penggunaan-alat-acoustics-leak-detector-pada-tembok-kamar-mandi-rembes.webp" alt="Penggunaan alat acoustics leak detector pada tembok kamar mandi yang rembes berjamur" loading="lazy">
+                    <img src="img/penggunaan-alat-acoustics-leak-detector-pada-tembok-kamar-mandi-rembes.webp" alt="Penggunaan alat acoustics leak detector pada tembok kamar mandi yang rembes berjamur" loading="lazy" decoding="async">
                     <div class="overlay-text">Deteksi Tembok Rembes</div>
                 </div>
                 <div class="masonry-item" data-category="sawangan" onclick="openLightbox('img/penemuan-akurat-sumber-kebocoran-air-pdam-tanpa-bongkar-rumah-limo.webp')">
-                    <img src="img/penemuan-akurat-sumber-kebocoran-air-pdam-tanpa-bongkar-rumah-limo.webp" alt="Penemuan akurat sumber kebocoran air PDAM tanpa harus membongkar seluruh rumah di Limo" loading="lazy">
+                    <img src="img/penemuan-akurat-sumber-kebocoran-air-pdam-tanpa-bongkar-rumah-limo.webp" alt="Penemuan akurat sumber kebocoran air PDAM tanpa harus membongkar seluruh rumah di Limo" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Limo</div>
                 </div>
                 <div class="masonry-item" data-category="margonda" onclick="openLightbox('img/kondisi-limbah-lemak-grease-trap-restoran-sebelum-disedot-margonda.webp')">
-                    <img src="img/kondisi-limbah-lemak-grease-trap-restoran-sebelum-disedot-margonda.webp" alt="Kondisi tumpukan limbah lemak grease trap restoran sebelum disedot area komersial Margonda" loading="lazy">
+                    <img src="img/kondisi-limbah-lemak-grease-trap-restoran-sebelum-disedot-margonda.webp" alt="Kondisi tumpukan limbah lemak grease trap restoran sebelum disedot area komersial Margonda" loading="lazy" decoding="async">
                     <div class="overlay-text">Live dari: Restoran Margonda</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/proses-penyedotan-bak-kontrol-lemak-dapur-komersial-depok.webp')">
-                    <img src="img/proses-penyedotan-bak-kontrol-lemak-dapur-komersial-depok.webp" alt="Proses penyedotan bak kontrol lemak dapur komersial sampai bersih tuntas di Depok" loading="lazy">
+                    <img src="img/proses-penyedotan-bak-kontrol-lemak-dapur-komersial-depok.webp" alt="Proses penyedotan bak kontrol lemak dapur komersial sampai bersih tuntas di Depok" loading="lazy" decoding="async">
                     <div class="overlay-text">Dapur Komersial Depok</div>
                 </div>
                 <div class="masonry-item" data-category="margonda" onclick="openLightbox('img/hasil-kuras-grease-trap-restoran-kembali-bersih-tidak-bau.webp')">
-                    <img src="img/hasil-kuras-grease-trap-restoran-kembali-bersih-tidak-bau.webp" alt="Hasil kuras limbah grease trap restoran Margonda kembali bersih kinclong dan tidak berbau" loading="lazy">
+                    <img src="img/hasil-kuras-grease-trap-restoran-kembali-bersih-tidak-bau.webp" alt="Hasil kuras limbah grease trap restoran Margonda kembali bersih kinclong dan tidak berbau" loading="lazy" decoding="async">
                     <div class="overlay-text">Hasil Kuras Margonda</div>
                 </div>
                 <div class="masonry-item" data-category="depok" onclick="openLightbox('img/testimoni-pelanggan-puas-jasa-saluran-mampet-bejopelita-depok.webp')">
-                    <img src="img/testimoni-pelanggan-puas-jasa-saluran-mampet-bejopelita-depok.webp" alt="Testimoni ibu rumah tangga pelanggan puas setelah menggunakan jasa saluran mampet BejoPelita Depok" loading="lazy">
+                    <img src="img/testimoni-pelanggan-puas-jasa-saluran-mampet-bejopelita-depok.webp" alt="Testimoni ibu rumah tangga pelanggan puas setelah menggunakan jasa saluran mampet BejoPelita Depok" loading="lazy" decoding="async">
                     <div class="overlay-text">Testimoni Pelanggan</div>
                 </div>
                 <div class="masonry-item" data-category="margonda" onclick="openLightbox('img/pemilik-restoran-tersenyum-puas-saluran-kembali-lancar-hari-itu-juga.webp')">
-                    <img src="img/pemilik-restoran-tersenyum-puas-saluran-kembali-lancar-hari-itu-juga.webp" alt="Pemilik restoran tersenyum puas operasional kembali lancar berkat tim ahli BejoPelita" loading="lazy">
+                    <img src="img/pemilik-restoran-tersenyum-puas-saluran-kembali-lancar-hari-itu-juga.webp" alt="Pemilik restoran tersenyum puas operasional kembali lancar berkat tim ahli BejoPelita" loading="lazy" decoding="async">
                     <div class="overlay-text">Testimoni Restoran</div>
                 </div>
             </div>
